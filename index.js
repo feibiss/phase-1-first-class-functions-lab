@@ -1,15 +1,25 @@
-const returnFirstTwoDrivers = (driversArray) => driversArray.slice(0, 2);
+// Code your solution in this file!
+const drivers = ['Moi', 'Rumi', 'Konde', 'Sato'];
+function returnFirstTwoDrivers(drivers) {
+  return drivers.slice(0, 2);
+}
+function returnLastTwoDrivers(drivers){
+return drivers.slice(-2)
+}
+const selectingDrivers=[returnFirstTwoDrivers,returnLastTwoDrivers]
 
-const returnLastTwoDrivers = (driversArray) => driversArray.slice(-2);
+function createFareMultiplier(a){
+ return function ( fare){
+    return fare*a
+ }
+}
 
-const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
-
-const createFareMultiplier = (multiplier) => (fare) => fare * multiplier;
-
-const fareDoubler = createFareMultiplier(2);
-
-const fareTripler = createFareMultiplier(3);
-
-const selectDifferentDrivers = (driversArray, selectionMethod) => {
- return selectionMethod(driversArray);
-};
+function fareDoubler(fare){
+return fare*2
+}
+function fareTripler(fare){
+return fare*3
+}
+function selectDifferentDrivers(drivers,selectingDrivers){
+ 
+return selectingDrivers(drivers)}
